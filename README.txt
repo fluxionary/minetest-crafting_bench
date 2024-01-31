@@ -1,22 +1,10 @@
-=-=-=-=-=-=-=-=-=-=
+# crafting_bench
 
-Crafting Bench
-by: Philipbenr And DanDuncombe
+originally by: Philipbenr And DanDuncombe, MIT license.
 
-=-=-=-=-=-=-=-=-=-=
+an auto-crafting bench. place raw materials into its inventory, define a crafting recipe in its main grid, and then
+every five seconds it will generate a crafted output.
 
-Licence: MIT
+this mod is compatible with hoppers.
 
-see: LICENSE
-
-=-=-=-=-=-=-=-=-=-=
-
-An auto-crafting bench. Place raw materials into its inventory, define a crafting recipe in its main grid, and then every five seconds it will generate a crafted output.
-
-This mod is compatible with hoppers.
-
-The crafting rate can be modified in advanced settings.
-
-=-=-=-=-=-=-=-=-=-=
-
-depends on [futil](https://content.minetest.net/packages/rheo/futil/).
+the crafting rate can be modified in advanced settings.

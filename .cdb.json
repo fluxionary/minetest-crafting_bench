@@ -1,0 +1,11 @@
+{
+    "type": "MOD",
+    "name": "crafting_bench",
+    "title": "crafting_bench",
+    "license": "LGPL-3.0-or-later",
+    "media_license": "CC-BY-SA-4.0",
+    "repo": "https://github.com/fluxionary/minetest-crafting_bench.git",
+    "website": "https://github.com/fluxionary/minetest-crafting_bench",
+    "issue_tracker": "https://github.com/fluxionary/minetest-crafting_bench/issues",
+    "short_description": "TODO: write a description"
+}
