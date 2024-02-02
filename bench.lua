@@ -36,6 +36,16 @@ minetest.register_node("crafting_bench:workbench", {
 		local inv = meta:get_inventory()
 		return inv:is_empty("src") and inv:is_empty("dst")
 	end,
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		local to_refund = minetest.deserialize(oldmetadata.fields.to_refund)
+		if to_refund then
+			for i = 1, #to_refund do
+				if not minetest.add_item(pos, to_refund[i]) then
+					crafting_bench.log("error", "lost %q @ %s", to_refund[i], minetest.pos_to_string(pos))
+				end
+			end
+		end
+	end,
 	allow_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
 		if not minetest.is_player(player) or minetest.is_protected(pos, player:get_player_name()) then
 			return 0
@@ -157,6 +167,10 @@ minetest.register_node("crafting_bench:workbench", {
 			if not dst[i]:is_empty() then
 				items[#items + 1] = dst[i]
 			end
+		end
+		local to_refund = minetest.deserialize(meta:get("to_refund"))
+		if to_refund then
+			table.insert_all(items, to_refund)
 		end
 		minetest.remove_node(pos)
 		return items
