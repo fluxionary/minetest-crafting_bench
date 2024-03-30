@@ -26,6 +26,7 @@ minetest.register_node("crafting_bench:workbench", {
 		local meta = minetest.get_meta(pos)
 		meta:set_string("formspec", crafting_bench.resources.formspec)
 		meta:set_string("infotext", S("Workbench"))
+		meta:set_string("refunded", "true") -- new workbenches shouldn't refund things
 		local inv = meta:get_inventory()
 		inv:set_size("src", invsize_src)
 		inv:set_size("rec", 3 * 3)
