@@ -1,5 +1,5 @@
 # the number of seconds between each operation of the crafting bench.
-crafting_bench:crafting_rate (crafting rate) int 5 1 60
+crafting_bench.crafting_rate (crafting rate) int 5 1 60
 
 # whether to refund items that were in the crafting grid of old benches.
-crafting_bench:refund_enabled (refund enabled) bool true
+crafting_bench.refund_enabled (refund enabled) bool true
